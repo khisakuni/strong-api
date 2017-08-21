@@ -1,7 +1,6 @@
 package database
 
 import (
-	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 	"os"
@@ -14,7 +13,6 @@ func Connect() (*gorm.DB, error) {
 	if dbsrc == "" {
 		dbsrc = "host=localhost user=koheihisakuni dbname=strong sslmode=disable"
 	}
-	fmt.Println(dbsrc)
 
 	Conn, err := gorm.Open("postgres", dbsrc)
 	if err != nil {

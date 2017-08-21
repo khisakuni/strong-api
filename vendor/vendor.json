@@ -7,6 +7,12 @@
 			"path": "github.com/jinzhu/gorm",
 			"revision": "c3bb6aaa828867eec72dd8571d111e442688f85f",
 			"revisionTime": "2017-08-11T15:24:00Z"
+		},
+		{
+			"checksumSHA1": "V5v7PncxnMJuo9THz0PN7ykg5mw=",
+			"path": "github.com/julienschmidt/httprouter",
+			"revision": "6f3f3919c8781ce5c0509c83fffc887a7830c938",
+			"revisionTime": "2017-03-24T20:14:42Z"
 		}
 	],
 	"rootPath": "github.com/khisakuni/strong"
