@@ -1,6 +1,6 @@
 {
 	"comment": "",
-  "heroku": {
+	"heroku": {
 		"install": [
 			"./cmd/..."
 		]
@@ -12,6 +12,18 @@
 			"path": "github.com/jinzhu/gorm",
 			"revision": "c3bb6aaa828867eec72dd8571d111e442688f85f",
 			"revisionTime": "2017-08-11T15:24:00Z"
+		},
+		{
+			"checksumSHA1": "QmQW8snORAputB7/1jFXpsOZa8A=",
+			"path": "github.com/jinzhu/gorm/dialects/postgres",
+			"revision": "c3bb6aaa828867eec72dd8571d111e442688f85f",
+			"revisionTime": "2017-08-11T15:24:00Z"
+		},
+		{
+			"checksumSHA1": "VIp1lZm6joWhlNdwhady8u//qRw=",
+			"path": "github.com/jinzhu/inflection",
+			"revision": "1c35d901db3da928c72a72d8458480cc9ade058f",
+			"revisionTime": "2017-01-02T12:52:26Z"
 		},
 		{
 			"checksumSHA1": "V5v7PncxnMJuo9THz0PN7ykg5mw=",
