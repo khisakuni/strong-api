@@ -1,0 +1,9 @@
+/vendor/*
+!/vendor/github.com/
+/vendor/github.com/*
+!/vendor/github.com/khisakuni
+
+!vendor.json
+
+strong
+.env
