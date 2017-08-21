@@ -30,6 +30,18 @@
 			"path": "github.com/julienschmidt/httprouter",
 			"revision": "6f3f3919c8781ce5c0509c83fffc887a7830c938",
 			"revisionTime": "2017-03-24T20:14:42Z"
+		},
+		{
+			"checksumSHA1": "Wh2YCiWY/VIAEEQGLS7sMB9isXk=",
+			"path": "github.com/lib/pq",
+			"revision": "8837942c3e09574accbc5f150e2c5e057189cace",
+			"revisionTime": "2017-06-03T22:54:54Z"
+		},
+		{
+			"checksumSHA1": "jaCQF1par6Jl8g+V2Cgp0n/0wSc=",
+			"path": "github.com/lib/pq/hstore",
+			"revision": "8837942c3e09574accbc5f150e2c5e057189cace",
+			"revisionTime": "2017-06-03T22:54:54Z"
 		}
 	],
 	"rootPath": "github.com/khisakuni/strong"
