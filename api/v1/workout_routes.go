@@ -3,14 +3,41 @@ package v1
 import (
 	"encoding/json"
 	"github.com/julienschmidt/httprouter"
+	"github.com/khisakuni/strong/database"
 	"github.com/khisakuni/strong/models"
 	"net/http"
+	"strconv"
 )
 
 func WorkoutRoutes(router *httprouter.Router) {
-	//router.GET("/api/v1/workouts", workoutsIndex)
-	//router.GET("/api/v1/workouts/:id", workoutsShow)
+	router.GET("/api/v1/workouts", workoutIndexAction)
+	router.GET("/api/v1/workouts/:id", workoutShowAction)
 	router.POST("/api/v1/workouts", workoutCreateAction)
+}
+
+func workoutIndexAction(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
+	var workouts []models.Workout
+	database.Conn.Find(&workouts)
+	w.Header().Set("content-type", "application/json")
+	json.NewEncoder(w).Encode(workouts)
+}
+
+func workoutShowAction(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
+	id, err := strconv.Atoi(p.ByName("id"))
+	if err != nil {
+		InternalServerError(w)
+		return
+	}
+
+	workout := models.Workout{ID: id}
+	err = database.Conn.Find(&workout).Error
+	if err != nil {
+		NotFound(w)
+		return
+	}
+
+	w.Header().Set("content-type", "application/json")
+	json.NewEncoder(w).Encode(workout)
 }
 
 func workoutCreateAction(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {

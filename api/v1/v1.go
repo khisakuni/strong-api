@@ -16,6 +16,14 @@ type errorMessage struct {
 	status  int
 }
 
+func NotFound(w http.ResponseWriter) {
+	err := errorMessage{
+		Message: "Resource not found",
+		status:  http.StatusNotFound,
+	}
+	writeErrorJSON(w, err)
+}
+
 func InternalServerError(w http.ResponseWriter) {
 	err := errorMessage{
 		Message: "Something went wrong",
