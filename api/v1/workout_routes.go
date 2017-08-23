@@ -18,6 +18,7 @@ func WorkoutRoutes(router *httprouter.Router) {
 func workoutIndexAction(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
 	var workouts []models.Workout
 	database.Conn.Find(&workouts)
+
 	w.Header().Set("content-type", "application/json")
 	json.NewEncoder(w).Encode(workouts)
 }
