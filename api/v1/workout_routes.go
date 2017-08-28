@@ -112,4 +112,5 @@ func workoutDestroyAction(w http.ResponseWriter, r *http.Request, p httprouter.P
 	}
 	w.Header().Set("content-type", "application/json")
 	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(workout)
 }
